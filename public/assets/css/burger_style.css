@@ -21,9 +21,34 @@ h2{
 #burger-name{
     margin-top: 30px;
 }
-#burger-input-form, #add-btn{
+#burger-input-form{
     margin-left: 25%;
 }
-li{
-    margin-bottom: 15px;
+.yetToDevour-burgers-list-item, .devoured-burgers-list-item{
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.yetToDevour-burgers, .devoured-burgers{
+    font-size: large;
+}
+.devour-btn{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#burger-name{
+    border-style: solid;
+    border-color: red;
+    border-radius: 10px;
+    
+}
+#add-btn{
+    margin-left: 18%;
+    color: grey;
+    border-style: solid;
+    border-color: limegreen;
+    border-radius: 5px;
+}
+#instruction-text{
+    font-size: small;
+    margin-top: 15px;
+    color: gray;
 }
