@@ -3,16 +3,16 @@
            <h2>Eat-Da-Burger</h2>
         </div>
         <div class="row justify-content-center">
-                <img src="/assets/img/burger.png">
+                <img class="shadow" src="/assets/img/burger.png">
         </div>
         <div class="row">
             <div class="col-md-4">
                 <ul>
                     {{#each burgers}}
                         {{#unless devoured}}
-                            <li>
-                                {{burger_name}}
-                                <button class="devour-btn" data-id="{{id}}">Devour it!</button>
+                            <li class="yetToDevour-burgers-list-item">
+                                <p style="display: inline-block" class="yetToDevour-burgers badge badge-success shadow">{{id}}   {{burger_name}}</p>
+                                <button style="display: inline-block;"class="devour-btn btn btn-sm btn-danger shadow" data-id="{{id}}">Devour it!</button>
                             </li>
                         {{/unless}}
                     {{/each}}
@@ -21,17 +21,18 @@
 
             <div class="col-md-4">
                 <form id="burger-input-form">
-                    <input id="burger-name" type="text"><br><br>
-                    <button id="add-btn" type="submit">Add</button>
+                    <input id="burger-name" class="shadow" type="text"><br><br>
+                    <button id="add-btn" class="shadow" type="submit">Add To List</button>
                 </form>
+                <div><p id="instruction-text">Enter a burger you wish to eat, and click the 'Add To List' button.</p></div>
             </div>
 
             <div class="col-md-4">
                  <ul>
                     {{#each burgers}}
                         {{#if devoured}}
-                            <li>
-                                {{burger_name}}
+                            <li class="devoured-burgers-list-item">
+                                <p class="devoured-burgers badge badge-info shadow">{{id}} {{burger_name}}</p>
                             </li>
                         {{/if}}
                     {{/each}}
