@@ -1,0 +1,26 @@
+body{
+    background-image: url("bg.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: ye;
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 50px;
+    border-color: yellowgreen;
+    border-style: solid;
+    border-width: thick;
+}
+h2{
+    color:#006400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#burger-name{
+    margin-top: 30px;
+}
+#burger-input-form, #add-btn{
+    margin-left: 25%;
+}

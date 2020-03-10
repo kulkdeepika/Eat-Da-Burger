@@ -1,0 +1,41 @@
+ <div class="container">
+        <div class="nav justify-content-center">
+           <h2>Eat-Da-Burger</h2>
+        </div>
+        <div class="row justify-content-center">
+                <img src="/assets/img/burger.png">
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <ul>
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                            <li>
+                                {{burger_name}}
+                                <button class="devour-btn" data-id="{{id}}">Devour it!</button>
+                            </li>
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <form id="burger-input-form">
+                    <input id="burger-name" type="text"><br><br>
+                    <button id="add-btn" type="submit">Add</button>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                 <ul>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            <li>
+                                {{burger_name}}
+                            </li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
