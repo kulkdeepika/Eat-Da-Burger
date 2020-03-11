@@ -10,6 +10,3 @@ CREATE TABLE burgers
     devoured BOOLEAN NOT NULL,
     PRIMARY KEY(id)
 );
-
-INSERT into burgers(burger_name, devoured)
-values ("Vegan Burger", 1);
