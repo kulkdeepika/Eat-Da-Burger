@@ -13,5 +13,3 @@ CREATE TABLE burgers
 
 INSERT into burgers(burger_name, devoured)
 values ("Vegan Burger", 1);
-
-SELECT * from burgers;
