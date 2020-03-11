@@ -26,5 +26,4 @@ The user can enter the name of the burger and click "Add To List" button to add 
 
 This app is hosted on Heroku and can be used with this link:
 
-[Heroku Link]()
-
+[Heroku Link](https://whispering-temple-02748.herokuapp.com/)
