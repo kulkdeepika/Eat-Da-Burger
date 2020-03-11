@@ -14,6 +14,7 @@ app.use(express.json());
 app.engine("handlebars", exphbs({defaultLayout : "main"}));
 app.set("view engine", "handlebars");
 
+// use the routes defined in the controller
 app.use(routes);
 
 app.listen(PORT, function(){

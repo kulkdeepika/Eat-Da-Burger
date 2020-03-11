@@ -1,5 +1,6 @@
 const connection = require("./connection.js");
 
+//This function returns a comma seperated string of (?) the number of which is determined by the length passed in
 const printQuestionMarks = function(len) {
     var arr = [];
     for (var i = 0; i < len; i++) {
@@ -8,6 +9,8 @@ const printQuestionMarks = function(len) {
     return arr.toString();
   }
 
+//This function takes in an object and returns a string which is ready to be used inline in a sql query staring
+// In our burger example, it converts {devoured : 1} to 'devoured = 1'
 const objToSql = function(obj){
     const arr = [];
     for(let key in obj){
@@ -22,6 +25,10 @@ const objToSql = function(obj){
     }
     return arr.toString();
 }
+
+// This object contains functions, for select, insert and Update operations which will be called from the model. 
+// These functions directly interact with the database
+// and call the callback function (cb) with the results from the database passed in.
 
 const orm = {
 
