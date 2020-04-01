@@ -77,7 +77,22 @@ const orm = {
             if(err){
                 throw err;
             }
+            cb(result);
+        });
+    },
 
+    deleteOne: function(tableInput, condition, cb){
+        let queryString = "DELETE from " + tableInput ;
+
+        queryString += " where ";
+        queryString += condition;
+
+        //console.log(queryString);
+
+        connection.query(queryString, function(err, result){
+            if(err){
+                throw err;
+            }
             cb(result);
         });
     }

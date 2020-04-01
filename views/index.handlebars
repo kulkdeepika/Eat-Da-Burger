@@ -32,7 +32,8 @@
                     {{#each burgers}}
                         {{#if devoured}}
                             <li class="devoured-burgers-list-item">
-                                <p class="devoured-burgers badge badge-info shadow">{{id}} {{burger_name}}</p>
+                                <p style="display: inline-block" class="devoured-burgers badge badge-info shadow">{{id}} {{burger_name}}</p>
+                                <button style="display: inline-block;"class="delete-btn btn btn-sm btn-danger shadow" data-id="{{id}}">Delete</button>
                             </li>
                         {{/if}}
                     {{/each}}

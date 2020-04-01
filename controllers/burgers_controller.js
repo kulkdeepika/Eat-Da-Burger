@@ -38,4 +38,16 @@ router.put("/api/burgers/:id", function(req, res){
     });
 });
 
+router.delete("/api/burgers/:id", function(req, res){
+    let condition = "id = " + req.params.id;
+
+    burger.deleteOne(condition, function(data){
+
+        if(data.affectedRows === 0){
+            res.status(404).end();
+        }
+        res.status(200).end();
+    });
+});
+
 module.exports = router;

@@ -10,3 +10,5 @@ CREATE TABLE burgers
     devoured BOOLEAN NOT NULL,
     PRIMARY KEY(id)
 );
+
+DROP table burgers;

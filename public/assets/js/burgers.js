@@ -41,8 +41,17 @@ $(document).ready(function(){
             console.log(res);
             location.reload();
         })
+    });
 
-
+    $(".delete-btn").on("click", function(event){
+        let id = $(this).data("id");
+        $.ajax({
+            url: "/api/burgers/" + id,
+            method: "DELETE"
+          }).then(function(res){
+            console.log(res);
+            location.reload();
+        })
     })
 
 });//end of document.ready
